@@ -24,6 +24,6 @@ public class Product {
     }
 
     public void decreasePrice(int amount) {
-        price = price + amount;
+        price = price - amount;
     }
 }
