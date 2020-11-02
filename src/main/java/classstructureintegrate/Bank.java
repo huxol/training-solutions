@@ -22,7 +22,34 @@ public class Bank {
         System.out.println("Mi az új számla száma?");
         String accountNumber2 = scanner.nextLine();
 
+        System.out.println("Ki a tulajdonosa?");
+        String owner2 = scanner.nextLine();
 
+        System.out.println("Mekkora összeggel nyitja?");
+        int amount2 = scanner.nextInt();
 
+        BankAccount account2 = new BankAccount(accountNumber2, owner2, amount2);
+
+        System.out.println(account1.getInfo());
+        System.out.println(account2.getInfo());
+
+        System.out.println("Mennyit szertne befizetni az első számlára?");
+        int depositAmount = scanner.nextInt();
+        account1.deposit(depositAmount);
+
+        System.out.println(account1.getInfo());
+
+        System.out.println("Mennyit szeretne felvenni a második számláról?");
+        int withdrawAmount = scanner.nextInt();
+        account2.withdraw(withdrawAmount);
+
+        System.out.println(account2.getInfo());
+
+        System.out.println("Mennyit szertne átutalni az első számláról a másodikra?");
+        int transferAmount = scanner.nextInt();
+        account1.transfer(account2, transferAmount);
+
+        System.out.println(account1.getInfo());
+        System.out.println(account2.getInfo());
     }
 }
