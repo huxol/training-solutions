@@ -29,7 +29,8 @@ public class IntroControlMain {
         introControl.printNumbers(33);
 
         System.out.println("printNumbersBetween");
-
+        introControl.printNumbersBetween(10, 30);
+        System.out.println();
 
     }
 }
