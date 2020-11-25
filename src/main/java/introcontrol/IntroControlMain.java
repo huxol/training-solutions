@@ -38,6 +38,6 @@ public class IntroControlMain {
         System.out.println("PrintOddNumbers - 10");
         introControl.printOddNumbers(10);
         System.out.println("PrintOddNumbers - 11");
-        introControl.printOddNumbers(1);
+        introControl.printOddNumbers(11);
     }
 }
