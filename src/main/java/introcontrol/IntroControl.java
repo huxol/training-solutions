@@ -41,4 +41,34 @@ public class IntroControl {
             return 10_000 - prev + next;
         }
     }
+
+    public void printNumbers(int max) {
+        for (int i = 0; i <= max; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public void printNumbersBetween(int min, int max) {
+        for (int i = min; i <= max; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public void printNumbersBetweenAnyDirection(int a, int b) {
+        if (b > a) {
+            for (int i = a; i>=b; i++) {
+                System.out.println(i);
+            }
+        } else {
+            for (int i = a; i>=b; i--) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public void printOddNumbers(int max) {
+        for (int i = 1; i <= max; i = i +2) {
+            System.out.println(i);
+        }
+    }
 }
