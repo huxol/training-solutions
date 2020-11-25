@@ -30,7 +30,14 @@ public class IntroControlMain {
 
         System.out.println("printNumbersBetween");
         introControl.printNumbersBetween(10, 30);
-        System.out.println();
+        System.out.println("printNumbersBetween - reverse");
+        introControl.printNumbersBetween(25, 15);
 
+        System.out.println("PrintOddNumbers - 1");
+        introControl.printOddNumbers(1);
+        System.out.println("PrintOddNumbers - 10");
+        introControl.printOddNumbers(10);
+        System.out.println("PrintOddNumbers - 11");
+        introControl.printOddNumbers(1);
     }
 }
