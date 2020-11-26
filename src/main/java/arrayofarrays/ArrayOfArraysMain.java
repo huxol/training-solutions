@@ -26,6 +26,17 @@ public class ArrayOfArraysMain {
             System.out.println();
         }
     }
+
+    public int[][] triangularMatrix(int size) {
+        int [][] triangularMatrix = new int[size][];
+        for (int i = 0; i < triangularMatrix.length; i++) {
+            triangularMatrix[i] = new int[i + 1];
+            for (int j = 0; j < i + 1; j++) {
+                triangularMatrix[i][j] = i;
+            }
+        }
+        return triangularMatrix;
+    }
 }
 
 
