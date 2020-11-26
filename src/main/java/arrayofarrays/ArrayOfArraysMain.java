@@ -12,5 +12,20 @@ public class ArrayOfArraysMain {
         return multiplicationTable;
     }
 
-
+    public void printArrayOfArrays(int[][] a) {
+        for (int i[] : a) {
+            for (int j : i) {
+               if (j < 10) {
+                   System.out.println(" ");
+               } else if (j < 100) {
+                   System.out.println( " ");
+               }
+                System.out.println(j);
+                System.out.println(" ");
+            }
+            System.out.println();
+        }
+    }
 }
+
+
