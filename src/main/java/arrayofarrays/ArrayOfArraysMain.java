@@ -37,6 +37,17 @@ public class ArrayOfArraysMain {
         }
         return triangularMatrix;
     }
+
+    public int[][] getValues() {
+        int [][] values = new int [12][];
+        int [] numberOfDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        for (int i = 0; i < numberOfDays.length; i++) {
+            values [i] = new int[numberOfDays[i]];
+        }
+        return values;
+    }
+
+
 }
 
 
