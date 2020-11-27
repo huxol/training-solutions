@@ -47,7 +47,16 @@ public class ArrayOfArraysMain {
         return values;
     }
 
+    public static void main(String[] args) {
+        ArrayOfArraysMain arrayOfArraysMain = new ArrayOfArraysMain();
 
+        System.out.println("MultiplicationTable");
+        arrayOfArraysMain.printArrayOfArrays(arrayOfArraysMain.multiplicationTable(10));
+
+        System.out.println("TriangularMatrix");
+        arrayOfArraysMain.printArrayOfArrays(arrayOfArraysMain.triangularMatrix(3));
+
+        System.out.println("Values per day");
+        arrayOfArraysMain.printArrayOfArrays(arrayOfArraysMain.getValues());
+    }
 }
-
-
