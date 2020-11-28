@@ -27,5 +27,17 @@ public class Capsules {
         return colors;
     }
 
-
+    public static void main(String[] args) {
+        Capsules capsules = new Capsules();
+        capsules.addLast("red");
+        capsules.addLast("green");
+        capsules.addLast("blue");
+        System.out.println(capsules.getColors());
+        capsules.addFirst("white");
+        System.out.println(capsules.getColors());
+        capsules.removeFirst();
+        System.out.println(capsules.getColors());
+        capsules.removeLast();
+        System.out.println(capsules.getColors());
+    }
 }
