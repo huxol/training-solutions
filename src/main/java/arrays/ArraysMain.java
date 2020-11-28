@@ -52,5 +52,26 @@ public class ArraysMain {
         return Arrays.equals(copyOfWinner, copyOfStake);
     }
 
+    public static void main(String[] args) {
+        ArraysMain arraysMain = new ArraysMain();
 
+        System.out.println(arraysMain.numberOfDaysAsString());
+
+        System.out.println(arraysMain.daysOfWeek());
+
+        System.out.println(arraysMain.multiplicationTableAsString(10));
+
+        System.out.println(arraysMain.sameTempValues(new double[] {1, 2, 3}, new double[] {1, 2, 3}));
+        System.out.println(arraysMain.sameTempValues(new double[] {1, 2, 3}, new double[] {2, 2, 3}));
+
+        System.out.println(arraysMain.sameTempValuesDayLight(new double[] {1, 2}, new double[] {1, 2, 3}));
+        System.out.println(arraysMain.sameTempValuesDayLight(new double[] {1, 3}, new double[] {1, 2, 3}));
+
+        int[] winner = new int[] {1, 2, 3, 4, 5};
+        int[] stake = new int[] {5, 4, 3, 2, 1};
+        System.out.println(arraysMain.wonLottery(winner, stake));
+        System.out.println(Arrays.toString(stake));
+
+        System.out.println(arraysMain.wonLottery(new int[] {1, 2, 3}, new int[] {2, 2, 3}));
+    }
 }
