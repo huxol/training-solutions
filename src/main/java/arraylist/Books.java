@@ -35,5 +35,18 @@ public class Books {
         return titles;
     }
 
+    public static void main(String[] args) {
+        Books books = new Books();
+        books.add("Antigoné");
+        books.add("A kis herceg");
+        books.add("Egri csillagok");
+        books.add("Candide");
 
+        System.out.println(books.getTitles());
+
+        System.out.println(books.findAllByPrefix("A"));
+
+        books.removeByPrefix("A");
+        System.out.println(books.getTitles());
+    }
 }
