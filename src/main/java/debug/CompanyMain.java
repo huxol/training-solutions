@@ -1,6 +1,7 @@
 package debug;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CompanyMain {
 
@@ -15,6 +16,10 @@ public class CompanyMain {
         company.addEmployee(employee2);
         company.addEmployee(employee3);
 
+        Employee jack = company.findEmployeeByName("Jack Doe");
+        System.out.println(jack.getName() + "" + jack.getYearOfBirth());
 
+        List<String> names = company.listEmployeeNames();
+        System.out.println(names);
     }
 }
