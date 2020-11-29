@@ -20,7 +20,7 @@ public class Restaurant {
     }
 
     private List<String> generateMenu() {
-        return Arrays.asList("Gulyásleves", "Brassói", "Almás pite");
+        return Arrays.asList("Gulyás leves", "Brassói", "Almás pite");
     }
 
     public String getName() {
