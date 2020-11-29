@@ -9,7 +9,7 @@ public class Task {
     private LocalDateTime startDateTime;
     private int duration;
 
-    public Task(String title, String description, LocalDateTime startDateTime, int duration ) {
+    public Task(String title, String description) {
         this.title = title;
         this.description = description;
     }
