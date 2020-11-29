@@ -1,4 +1,4 @@
-package attributes;
+package attributes.person;
 
 public class Address {
 

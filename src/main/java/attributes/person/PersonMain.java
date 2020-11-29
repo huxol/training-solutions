@@ -1,7 +1,5 @@
 package attributes.person;
 
-import attributes.Address;
-
 public class PersonMain {
 
     public static void main(String[] args) {

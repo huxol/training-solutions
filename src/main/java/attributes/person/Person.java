@@ -1,7 +1,5 @@
 package attributes.person;
 
-import attributes.Address;
-
 public class Person {
 
     private String name;
