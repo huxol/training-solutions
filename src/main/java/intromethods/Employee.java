@@ -26,8 +26,12 @@ public class Employee {
         return hiringYear;
     }
 
-    public int getSalary(int amount) {
-        return salary += amount;
+    public int getSalary() {
+        return salary;
+    }
+
+    public void raiseSalary(int amount) {
+        salary += amount;
     }
 
 
