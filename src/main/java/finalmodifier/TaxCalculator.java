@@ -13,7 +13,7 @@ public class TaxCalculator {
     }
 
     public static void main(String[] args) {
-        System.out.println(new TaxCalculator().tax(1_000));
-        System.out.println(new TaxCalculator().priceWithTax(1_000));
+        System.out.println(new TaxCalculator().tax(1000));
+        System.out.println(new TaxCalculator().priceWithTax(1000));
     }
 }
