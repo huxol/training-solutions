@@ -38,7 +38,7 @@ public class ObjectsMain {
 
         Book[] books = { new Book(), new Book(), new Book()};
 
-        List<Book> books1 = Arrays.asList(new Book(), new Book());
+        List<Book> books1 = Arrays.asList(new Book(), new Book(), new Book());
 
         List<Book> books2 = new ArrayList<>();
         books2.add(new Book());
