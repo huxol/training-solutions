@@ -34,5 +34,12 @@ public class Employee {
         salary += amount;
     }
 
-
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", hiringYear=" + hiringYear +
+                ", salary=" + salary +
+                '}';
+    }
 }
