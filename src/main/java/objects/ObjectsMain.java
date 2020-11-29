@@ -35,6 +35,7 @@ public class ObjectsMain {
 
         System.out.println(anotherBook);
         System.out.println(book == anotherBook);
+        System.out.println(anotherBook instanceof Book);
 
         Book[] books = { new Book(), new Book(), new Book()};
 
