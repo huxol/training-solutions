@@ -46,6 +46,8 @@ public class TodoList {
         return sum;
     }
 
-
-
+    @Override
+    public String toString() {
+        return todos.toString();
+    }
 }

@@ -22,5 +22,8 @@ public class Todo {
         finished = true;
     }
 
-
+    @Override
+    public String toString() {
+        return caption + " (" + (finished ? "finished" : "not finished") + ")";
+    }
 }
