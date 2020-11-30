@@ -15,14 +15,10 @@ public class SocialNetwork {
 
     public void connect(String name, String anotherName) {
         Member first = findByName(name);
-        first.connectMember(findByName(anotherName));
+        first.connectMember(findByName(name));
     }
 
     private Member findByName(String name) {
-        return findByName(name);
-    }
-
-    private Member findByName(String name, String anotherName) {
         for (Member member: members) {
             if (member.getName().equals(name)) {
                 return member;
