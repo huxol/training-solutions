@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class DayInMonthTest {
 
     @Test
-    public void testNumberOfDay() {
-        assertEquals(31, new DayInMonth().numberOfDays(2017, "Május"));
-        assertEquals(31, new DayInMonth().numberOfDays(2017, "Június"));
-        assertEquals(31, new DayInMonth().numberOfDays(2017, "Február"));
-        assertEquals(31, new DayInMonth().numberOfDays(2000, "Február"));
+    public void testNumberOfDays() {
+        assertEquals(31, new DayInMonth().numberOfDays(2017, "május"));
+        assertEquals(30, new DayInMonth().numberOfDays(2017, "június"));
+        assertEquals(28, new DayInMonth().numberOfDays(2017, "február"));
+        assertEquals(29, new DayInMonth().numberOfDays(2000, "február"));
     }
 
     @Test
@@ -22,17 +22,17 @@ public class DayInMonthTest {
 
     @Test
     public void testLeapYear() {
-        assertEquals(29, new DayInMonth().numberOfDays(2012, "Február"));
+        assertEquals(29, new DayInMonth().numberOfDays(2012, "február"));
     }
 
     @Test
     public void testLeapYea100() {
-        assertEquals(29, new DayInMonth().numberOfDays(1900, "Február"));
+        assertEquals(28, new DayInMonth().numberOfDays(1900, "február"));
     }
 
     @Test
     public void testLeapYear400() {
-        assertEquals(29, new DayInMonth().numberOfDays(2000, "Február"));
+        assertEquals(29, new DayInMonth().numberOfDays(2000, "február"));
     }
 
     @Test

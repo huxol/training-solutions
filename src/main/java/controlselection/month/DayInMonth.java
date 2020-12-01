@@ -4,20 +4,20 @@ public class DayInMonth {
 
     public int numberOfDays(int year, String month) {
         switch (month.toLowerCase()) {
-            case "Január":
-            case "Március":
-            case "Május":
-            case "Július":
-            case "Augusztus":
-            case "Október":
-            case "December":
+            case "január":
+            case "március":
+            case "május":
+            case "július":
+            case "augusztus":
+            case "október":
+            case "december":
                 return 31;
-            case "Április":
-            case "Június":
-            case "Szeptember":
-            case "November":
+            case "április":
+            case "június":
+            case "szeptember":
+            case "november":
                 return 30;
-            case "Február":
+            case "február":
                 if (((year % 4 == 0) &&
                         !(year % 100 == 0))
                         || (year % 400 == 0)) {
