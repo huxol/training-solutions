@@ -9,7 +9,7 @@ public class WithoutAccents {
     public char convertToCharWithoutAccents(char c) {
         int index = LETTERS_WITH_ACCENTS.indexOf(c);
         if (index >= 0) {
-            return LETTERS_WITH_ACCENTS.charAt(index);
+            return LETTERS_WITHOUT_ACCENTS.charAt(index);
         }
         else {
             return c;
