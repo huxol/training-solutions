@@ -1,4 +1,4 @@
-package introexception;
+package introexception.patient;
 
 public class SsnValidator {
     public boolean isValidSsn(String ssn) {

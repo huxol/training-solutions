@@ -1,4 +1,4 @@
-package introexception;
+package introexception.patient;
 
 public class Patient {
 
