@@ -1,5 +1,5 @@
 package stringbasic.pets;
 
-public class Gender {
-
+public enum Gender {
+    MALE, FEMALE, UNKOWN
 }
