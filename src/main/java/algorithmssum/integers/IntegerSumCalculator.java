@@ -1,4 +1,4 @@
-package algorithmssum.algorithmssum.integers;
+package algorithmssum.integers;
 
 import java.util.List;
 
