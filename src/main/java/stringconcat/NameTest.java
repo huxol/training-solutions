@@ -11,25 +11,25 @@ public class NameTest {
     @Test
     public void  invalidParametersShouldThrowExceptionNullFamilyName() throws IllegalArgumentException {
         Exception ex = assertThrows(IllegalArgumentException.class, () -> new Name(null, "G", "John", Title.MR));
-        assertEquals("Family name and given name must not be empty!", ex.getMessage());
+        assertEquals("A családnév és keresztnév mezők nem lehetnek üresek!", ex.getMessage());
     }
 
     @Test
     public void invalidParametersShouldThrowExceptionNullGivenName() throws IllegalArgumentException {
         Exception ex = assertThrows(IllegalArgumentException.class, () -> new Name("Smith", "G", null, Title.MR));
-        assertEquals("Family name and given name must not be empty!", ex.getMessage());
+        assertEquals("A családnév és keresztnév mezők nem lehetnek üresek!", ex.getMessage());
     }
 
     @Test
     public void invalidParametersShouldThrowExceptionEmptyFamilyName() throws IllegalArgumentException {
         Exception ex = assertThrows(IllegalArgumentException.class, () -> new Name("", "G", "John", Title.MR));
-        assertEquals("Family name and given name must not be empty!", ex.getMessage());
+        assertEquals("A családnév és keresztnév mezők nem lehetnek üresek!", ex.getMessage());
     }
 
     @Test
     public void invalidParametersShouldThrowExceptionEmptyGivenName() throws IllegalArgumentException {
         Exception ex = assertThrows(IllegalArgumentException.class, () -> new Name("Smith", "G", "", Title.MR));
-        assertEquals("Family name and given name must not be empty!", ex.getMessage());
+        assertEquals("A családnév és keresztnév mezők nem lehetnek üresek!", ex.getMessage());
     }
 
     @Test

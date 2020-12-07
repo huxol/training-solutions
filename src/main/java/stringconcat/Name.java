@@ -14,7 +14,7 @@ public class Name {
 
     public Name(String familyName, String middleName, String givenName) {
         if (isEmpty(familyName) || isEmpty(givenName)) {
-            throw new IllegalArgumentException("Family name and given name must not be empty!");
+            throw new IllegalArgumentException("A családnév és keresztnév mezők nem lehetnek üresek!");
         }
         this.familyName = familyName;
         this.middleName = middleName;
