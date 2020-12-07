@@ -14,7 +14,7 @@ public class Employee {
             throw new IllegalArgumentException("A munkakör mező nem lehet üres!");
         }
         if (salary <= 0) {
-            throw new IllegalArgumentException("A munkabér mező értéke csak 0, vagy pozitív szám lehet");
+            throw new IllegalArgumentException("A munkabér mező értéke csak 0, vagy pozitív szám lehet!");
         }
         this.name = name;
         this.job = job;
