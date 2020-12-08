@@ -2,23 +2,20 @@ package week05d02;
 
 public class ChangeLetter {
 
-    public final String REPLACE_FROM = "aeiou";
-    public final char REPLACE_TO = '*';
+    public static final String VOWELS = "aeiou";
+    public static final String STAR = "*";
 
-    public String chhangeVowels(String input) {
-        if ( input==null || input.isBlank() ) {
-            return "";
+    public String changeVowels(String text) {
+        text = text.toLowerCase();
+        char[] eng = {'a', 'e', 'i', 'o', 'u'};
+        for (char c : eng) {
+            text = text.replace(c, '*');
         }
+        return text;
+    }
 
-        StringBuilder result = new StringBuilder(input.length());
-        result.append(input);
-
-        for ( int i=0 ; i<result.length() ; ++i ){
-            if ( REPLACE_FROM.contains( result.substring(i,i+1).toLowerCase() )){
-                result.setCharAt(i,REPLACE_TO);
-            }
-        }
-
-        return result.toString();
+    public static void main(String[] args) {
+        ChangeLetter changeLetter = new ChangeLetter();
+        System.out.println(changeLetter.changeVowels("Main method java"));
     }
 }
