@@ -20,6 +20,6 @@ public class ProductTest {
         ));
 
         assertEquals(2, Store.getProductByCategoryName(BAKEDGOODS));
-        assertEquals(1, Store.getProductByCategoryName(DAIRY));
+        assertEquals(3, Store.getProductByCategoryName(DAIRY));
     }
 }
