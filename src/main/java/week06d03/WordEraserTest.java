@@ -10,7 +10,7 @@ public class WordEraserTest {
     public void eraseWordTest() {
         WordEraser we = new WordEraser();
         String original = "alma körte barack alma szílva körte bírsalma";
-        String result = "körte barack szilva körte bírsalma";
+        String result = "körte barack szílva körte bírsalma";
         assertEquals(result, we.eraseWord(original, "alma"));
     }
 }
