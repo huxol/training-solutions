@@ -1,5 +1,7 @@
 package week06d03;
 
+import java.util.Scanner;
+
 public class WordEraser {
 
     public String eraseWord(String words, String word) {
@@ -11,6 +13,19 @@ public class WordEraser {
             }
         }
         return sb.toString().trim();
+    }
+
+    public String erasewordsWithScanner(String words, String word) {
+        Scanner scanner = new Scanner(words);
+        StringBuilder result = new StringBuilder();
+
+        while(scanner.hasNext()) {
+            String s = scanner.next();
+            if (word.equals(s)) {
+                result.append(s + " ");
+            }
+        }
+        return result.toString().trim();
     }
 
 
