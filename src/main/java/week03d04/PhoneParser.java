@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class PhoneParser {
 
     public Phone parsePhone(String s) {
-        String prefix = s.substring(0, 2);
-        String number = s.substring(3);
+        String prefix = s.substring(0, s.indexOf("-"));
+        String number = s.substring(s.indexOf("-") + 1);
         Phone phone = new Phone(prefix, number);
         return phone;
     }
