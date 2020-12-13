@@ -20,9 +20,9 @@ class LabTestTest {
 
     @Test
     void TestConstructorWithParameter() {
-        Lab lab = new Lab("Method ", LocalDate.of(2020, 10,12));
+        Lab lab = new Lab("Method ", LocalDate.of(2020, 11,11));
 
-        assertEquals(LocalDate.of(2020, 10,12), lab.getCompletedAt());
+        assertEquals(LocalDate.of(2020, 11,11), lab.getCompletedAt());
         assertTrue(lab.isCompleted());
         assertEquals("Method ", lab.getTitle());
     }
