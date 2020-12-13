@@ -1,9 +1,9 @@
-package week04;
+package week04d03;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class NumberGuesser {
+public class GuessTheNumber {
 
     public static void main(String[] args) {
         int number = new Random().nextInt(100) + 1;
@@ -13,7 +13,7 @@ public class NumberGuesser {
         boolean ok = false;
         int round = 0;
 
-        while(!ok && round<=6) {
+        while(!ok && round <= 6) {
             round++;
             System.out.println(" Kérek egy számot! ");
             int guessed = Integer.parseInt(scanner.nextLine());
