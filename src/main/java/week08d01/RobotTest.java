@@ -13,7 +13,6 @@ public class RobotTest {
         robot.move("FFLLLLLBBBBJJJJJJJ");
         assertEquals(3,robot.getPosition().getX());
         assertEquals(-3,robot.getPositions().getY());
-
     }
 
     @Test
