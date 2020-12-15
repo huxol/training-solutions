@@ -32,8 +32,12 @@ public class Robot {
                 return;
             }
             default:
-                throw new IllegalArgumentException("Érvénytelen művelet");
+                throw new IllegalArgumentException("Érvénytelen művelet!");
         }
+    }
+
+    public Point getPosition() {
+        return position;
     }
 }
 
