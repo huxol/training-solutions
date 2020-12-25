@@ -44,7 +44,7 @@ public class BankTransaction {
         return currentMaxValue;
     }
 
-    public static BigDecimal getSumOfTrx() {
+    public static BigDecimal getSumOfTrxs() {
         return sumOfTrxs;
     }
 
