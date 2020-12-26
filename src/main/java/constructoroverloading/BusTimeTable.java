@@ -29,6 +29,6 @@ public class BusTimeTable {
                 return timeTable.get(i);
             }
         }
-        throw new IllegalStateException("No more buses today!");
+        throw new IllegalStateException(" No more buses today! ");
     }
 }
