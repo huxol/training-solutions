@@ -1,0 +1,10 @@
+
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üô›İ8İüí‚æ.
+c
+java:S1192"GDefine a constant instead of duplicating this literal "QWE789" 3 times.(çÿ“(8µä†ƒæ.
+H
+java:S5960"+Remove this assertion from production code.(ê£­¨8©·ê‚æ.
+†
+java:S1130"iRemove the declaration of thrown exception 'java.lang.NullPointerException' which is a runtime exception.(Öä¾8ßê‚æ.
+
+java:S1130"mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(ûÊĞÿÿÿÿÿ8ãÈş‚æ.

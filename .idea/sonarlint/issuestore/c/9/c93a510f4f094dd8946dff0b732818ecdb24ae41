@@ -1,0 +1,10 @@
+
+?
+java:S2189;""Correct this loop's end condition.(¢à²8êãğöß.
+Z	java:S1065"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ8Ä½´öß.
+Z	java:S106G"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ8ïğ†÷ß.
+V
+java:S2251;"9"i" is incremented and will never reach "stop condition".(¢à²8êãğöß.
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ8 æŸöß.
+Z	java:S106@"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ8åõùöß.
+Z	java:S106<"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ8êãğöß.

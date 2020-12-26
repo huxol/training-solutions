@@ -1,0 +1,28 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•šòıÿÿÿÿ8„«€à.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰å«´8ıù¦€à.
+c
+java:S1854"FRemove this useless assignment to local variable "csÃ³nak1KapacitÃ¡s".(æŠ»œ8ŠøŸ€à.
+U	java:S106'"9Replace this use of System.out or System.err by a logger.(ãèµƒ8Ôìò€à.
+T
+java:S1481	"7Remove this unused "csÃ³nak2KapacitÃ¡s" local variable.(ÜÛÙå8‹£ €à.
+Z	java:S106)"9Replace this use of System.out or System.err by a logger.(‡’š÷şÿÿÿÿ8Ïèõ€à.
+c
+java:S1854
+"FRemove this useless assignment to local variable "csÃ³nak3KapacitÃ¡s".(¢ÀÍ’8¨ü €à.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¹á¹ğıÿÿÿÿ8ò¥é€à.
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(³¥Ğıÿÿÿÿ8¾«í€à.
+T
+java:S1481"7Remove this unused "csÃ³nak1KapacitÃ¡s" local variable.(æŠ»œ8ŠøŸ€à.
+m	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ÀÍ’8øÎ€à.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æŠ»œ8ğÁ€à.
+m	java:S117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÛÙå8øÎ€à.
+T
+java:S1481
+"7Remove this unused "csÃ³nak3KapacitÃ¡s" local variable.(¢ÀÍ’8ÔÂ €à.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¯õİ—şÿÿÿÿ8²¿¯€à.
+U	java:S106*"9Replace this use of System.out or System.err by a logger.(Ö«ƒ¿8ÎÁù€à.
+c
+java:S1854	"FRemove this useless assignment to local variable "csÃ³nak2KapacitÃ¡s".(ÜÛÙå8‹£ €à.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ºâö–ıÿÿÿÿ8Ê¥¢€à.

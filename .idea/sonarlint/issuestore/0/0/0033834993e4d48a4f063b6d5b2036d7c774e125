@@ -1,0 +1,7 @@
+
+J
+java:S1172"-Remove this unused method parameter "Azimut".(øéŸ”8±£±æ.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øéŸ”8ıœš±æ.
+Œ
+java:S4165
+"jRemove this useless assignment; "actualAzimut" already holds the assigned value along all execution paths.(¾æŞàúÿÿÿÿ8±£±æ.

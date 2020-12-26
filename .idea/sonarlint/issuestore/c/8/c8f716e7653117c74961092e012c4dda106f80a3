@@ -1,0 +1,10 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(û…½Àşÿÿÿÿ8ù‘·àå.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ç›¢µıÿÿÿÿ8Ø‚®àå.
+
+java:S1488
+"]Immediately return this expression instead of assigning it to the temporary variable "phone".(¿Ö£øÿÿÿÿ8¬†£àå.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Š©‹Õøÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(Üşª8İ‡µàå.
+P
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8şÖ’àå.

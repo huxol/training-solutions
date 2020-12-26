@@ -1,0 +1,11 @@
+
+:
+java:S2119"Save and re-use this "Random".(¼İÅf8º–¤´æ.
+:
+java:S2119"Save and re-use this "Random".(¼İÅf8ùØ‹´æ.
+G
+java:S1481"+Remove this unused "random" local variable.(¼İÅf8ùØ‹´æ.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(×ŸÜ
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(ßÂï„ùÿÿÿÿ8öğÔ´æ.
+V
+java:S1854":Remove this useless assignment to local variable "random".(¼İÅf8ùØ‹´æ.

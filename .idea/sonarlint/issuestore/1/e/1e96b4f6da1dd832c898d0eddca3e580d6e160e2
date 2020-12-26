@@ -1,0 +1,11 @@
+
+q
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(üùô¾8Şøíàå.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Š©‹Õøÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(Üşª8çƒóàå.
+H
+java:S5960"+Remove this assertion from production code.(ˆÊŸË8Üèîàå.
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(æõûßÿÿÿÿÿ8Şøíàå.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ç›¢µıÿÿÿÿ8çƒóàå.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(û…½Àşÿÿÿÿ8çƒóàå.

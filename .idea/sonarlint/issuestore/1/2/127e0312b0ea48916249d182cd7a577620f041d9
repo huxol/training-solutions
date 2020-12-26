@@ -1,0 +1,13 @@
+
+L
+java:S1444"1Make this "public static UPPER_LIMIT" field final(ÿÈÑ³úÿÿÿÿ
+q
+java:S3008"VRename this field "LOWER_LIMIT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(××Êçþÿÿÿÿ
+L
+java:S1444"1Make this "public static LOWER_LIMIT" field final(××Êçþÿÿÿÿ
+r
+java:S1104"WMake UPPER_LIMIT a static final constant or non-public and provide accessors if needed.(ÿÈÑ³úÿÿÿÿ
+q
+java:S3008"VRename this field "UPPER_LIMIT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÈÑ³úÿÿÿÿ
+r
+java:S1104"WMake LOWER_LIMIT a static final constant or non-public and provide accessors if needed.(××Êçþÿÿÿÿ
