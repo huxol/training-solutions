@@ -1,4 +1,7 @@
-package virtualmethod.vehicle;
+package virtualmethod.ferryboat;
+
+import virtualmethod.vehicle.Car;
+import virtualmethod.vehicle.Vehicle;
 
 public class FerryBoat extends Vehicle {
     private Car car;
