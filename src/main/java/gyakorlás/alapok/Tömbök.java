@@ -36,5 +36,7 @@ public class Tömbök {
             for (int j =0; j <=2; j++)
                 System.out.println(tömb[i] [j] + " ");
         }
-    } */
+    }
+
+    */
 
