@@ -13,5 +13,7 @@ public class VéletlenSzámGenerálás {
     }
 }
 
-//* Készíts programot, ami generál két véletlen egész számot [0;100] intervallumban.
-// A nagyobbik számból vonja ki a kisebbet, és írja ki a végeredményt.
+//  Készíts programot, ami generál két véletlen egész számot [0;100] intervallumban.
+//  A nagyobbik számból vonja ki a kisebbet, és írja ki a végeredményt.
+
+// (int)( Math.random()*(felső-alsó+1) )+alsó;
