@@ -32,7 +32,4 @@ public class Cruise {
     public List<Passenger> getPassengers() {
         return passengers;
     }
-
-    public void bookPassenger(Passenger john_doe) {
-    }
 }
