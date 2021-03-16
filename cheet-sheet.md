@@ -1,3 +1,24 @@
+# Beállítások a `pom.xml`-ben
+
+Beállítja, hogy a forrásfájlok karakterkódolása `UTF-8` legyen,
+és 15-ös Javat használjon.
+
+```xml
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>15</maven.compiler.source>
+    <maven.compiler.target>15</maven.compiler.target>
+</properties>
+```
+
+# A `.gitignore` fájl
+
+```plain
+target
+.idea
+*.iml
+```
+
 # Main
 
 ```java
@@ -160,7 +181,7 @@ for (String name: names) {
 # Tömbök
 
 Lehetőleg kerüljük, helyette használjunk listát!
-Néhány helyen elkerülhetetlen, pl. varargs, 
+Néhány helyen elkerülhetetlen, pl. varargs,
 `split()` vagy ha a feladat így kéri.
 
 ```java
@@ -184,6 +205,8 @@ List<String> moreNumbers = new ArrayList<>(); // Módosítható lista, diamond o
 
 List<String> copy = new ArrayList<>(numbers); // Módosítható másolat
 
+List<String> namesToModify = new ArrayList<>(List.of("John", "Jack")); // Módosítható lista egy utasításban
+
 copy.add("Jane"); // ["John", "Jack", "Jane"] - hozzáadás
 copy.remove("John"); // ["Jack", "Jane"] - eltávolítás
 
@@ -197,6 +220,33 @@ for(String name: names){
     System.out.println(name);
 }
 ```
+
+Eltávolítás listából, miközben bejárjuk:
+
+```java
+List<String> names = new ArrayList<>(List.of("John Doe", "Jack Doe", "John Smith"));
+
+List<String> johns = new ArrayList<>();
+for (String name: names) {
+    if (name.startsWith("John")) {
+        johns.add(name);
+    }
+}
+names.removeAll(johns);
+```
+Iterátorral:
+
+```java
+List<String> names = new ArrayList<>(List.of("John Doe", "Jack Doe", "John Smith"));
+Iterator<String> it = names.iterator();
+while (it.hasNext()) {
+    String name = it.next();
+    if (name.startsWith("John")) {
+        it.remove();
+    }
+}
+```
+
 
 # Véletlenszám
 
@@ -215,9 +265,35 @@ public enum Coin {
 
 # JUnit
 
+## Függőségek
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.7.1</version>
+        <scope>test</scope>
+    </dependency>
+
+</dependencies>
+
+<build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.2</version>
+        </plugin>
+    </plugins>
+</build>
+```
+
+## Teszt osztály
+
 ```java
 public class TestCalculator {
 
+    @Test
     void testAdd() {
         // Given
         Calculator calculator = new Calculator();
@@ -342,7 +418,7 @@ public List<String> getNames(List<Employee> employees) {
 ```java
 public class FileReader {
 
-    public List<String> readLines(BufferedReader reader) throws IOException {
+    public void readLines(BufferedReader reader) throws IOException {
         String line;
         while ((line = reader.readLine())  != null) {
             System.out.println(line);
@@ -374,7 +450,7 @@ try (BufferedReader reader = new BufferedReader(new InputStreamReader(FileReader
 ```java
 public class FileWriter {
 
-    public void writeLines(List<String> employees, BufferedWriter writer) {
+    public void writeLines(List<Employee> employees, BufferedWriter writer) {
         try {
             for (String employee : employees) {
                 writer.write(employee.getName() + "," + employee.getYearOfBirth());
@@ -385,8 +461,9 @@ public class FileWriter {
     }
 
     public static void main(String[] args) {
+        List<Employee> employees = List.of(new Employee("John Doe", 1970), new Employee("Jack Doe", 1980));
         try (BufferedWriter writer = Files.newBufferedWriter(Path.of("data.csv"))) {
-            new FileWriter().writeLines(writer);
+            new FileWriter().writeLines(employees, writer);
         } catch (IOException ioe) {
             throw new IllegalStateException("Can not write file", ioe);
         }
@@ -461,9 +538,9 @@ Collections.sort(numbers);
 List<String> names = new ArrayList<>(List.of("Benjámin", "Áron", "József", "Arnold"));
 Collections.sort(names, Collator.getInstance(new Locale("hu", "HU")));
 
-List<Employee> employees = List.of(
+List<Employee> employees = new ArrayList<>(List.of(
         new Employee("John Doe", 1980),
-        new Employee("Jack Doe", 1970));
+        new Employee("Jack Doe", 1970)));
 
 // Év vagy név szeretnénk rendezni
 Collections.sort(employees, new Comparator<Employee>() {
@@ -473,4 +550,144 @@ Collections.sort(employees, new Comparator<Employee>() {
         return o1.getName().compareTo(o2.getName());
     }
 });
+```
+
+# JDBC
+
+## Függőségek
+
+```xml
+<dependency>
+    <groupId>org.mariadb.jdbc</groupId>
+    <artifactId>mariadb-java-client</artifactId>
+    <version>2.7.2</version>
+</dependency>
+<dependency>
+    <groupId>org.flywaydb</groupId>
+    <artifactId>flyway-core</artifactId>
+    <version>7.5.3</version>
+</dependency>
+```
+
+## DataSource létrehozása
+
+```java
+MariaDbDataSource dataSource;
+try {
+    dataSource = new MariaDbDataSource();
+    dataSource.setUrl("jdbc:mariadb://localhost:3306/employees?useUnicode=true");
+    dataSource.setUser("employees");
+    dataSource.setPassword("employees");
+}
+catch (SQLException se) {
+    throw new IllegalStateException("Can not create data source", se);
+}
+```
+
+## Flyway
+
+```java
+Flyway flyway = Flyway.configure().dataSource(dataSource).load();
+
+flyway.clean();
+flyway.migrate();
+```
+
+## Paraméterezett insert, update, delete
+
+```java
+try (
+        Connection conn = dataSource.getConnection();
+        PreparedStatement stmt =
+                conn.prepareStatement("insert into employees(emp_name) values (?)")) {
+    stmt.setString(1, name);
+    stmt.executeUpdate();
+}
+catch (SQLException se) {
+    throw new IllegalStateException("Cannot insert", se);
+}
+```
+
+## Lekérdezés
+
+```java
+public List<String> listEmployeeNames() {
+    try (
+            Connection conn = dataSource.getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("select emp_name from employees order by emp_name")
+    ) {
+        List<String> names = new ArrayList<>();
+        while (rs.next()) {
+            String name = rs.getString("emp_name");
+            names.add(name);
+        }
+        return names;
+    }
+    catch (SQLException se) {
+        throw new IllegalStateException("Cannot select employees", se);
+    }
+}
+```
+
+## Paraméterezett lekérdezés
+
+```java
+try (
+        Connection conn = dataSource.getConnection();
+        PreparedStatement stmt =
+          conn.prepareStatement("select emp_name from employees where id = ?");
+) {
+    stmt.setLong(1, id);
+
+    // ...
+} catch (SQLException sqle) {
+    throw new IllegalArgumentException("Error by insert", sqle);
+}
+```
+
+```java
+try (
+        ResultSet rs = stmt.executeQuery();
+) {
+    if (rs.next()) {
+        String name = rs.getString("emp_name");
+        return name;
+    }
+    throw new IllegalArgumentException("No result");
+} catch (SQLException sqle) {
+    throw new IllegalArgumentException("Error by insert", sqle);
+}
+```
+
+## Generált azonosító lekérdezése
+
+```java
+try (Connection conn = dataSource.getConnection();
+     PreparedStatement stmt = conn.prepareStatement("insert into employees(emp_name) values (?)",
+             Statement.RETURN_GENERATED_KEYS)
+) {
+
+    stmt.setString(1, name);
+    stmt.executeUpdate();
+    return executeAndGetGeneratedKey(stmt);
+} catch (SQLException sqle) {
+    throw new IllegalArgumentException("Error by insert", sqle);
+}
+```
+
+```java
+private long executeAndGetGeneratedKey(PreparedStatement stmt) {
+    try (
+            ResultSet rs = stmt.getGeneratedKeys();
+    ) {
+        if (rs.next()) {
+            return rs.getLong(1);
+        } else {
+            throw new SQLException("No key has generated");
+        }
+    } catch (SQLException sqle) {
+        throw new IllegalArgumentException("Error by insert", sqle);
+    }
+}
 ```
