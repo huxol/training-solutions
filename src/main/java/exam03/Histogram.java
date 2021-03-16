@@ -18,11 +18,11 @@ public class Histogram {
         return result.toString();
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         try (BufferedReader reader = Files.newBufferedReader(Path.of("src/main/resources/histogram.txt"))) {
             new FileReader().readLines(reader);
         } catch (IOException ioe) {
             throw new IllegalStateException("Can not read file", ioe);
         }
-    }
+    } */
 }
